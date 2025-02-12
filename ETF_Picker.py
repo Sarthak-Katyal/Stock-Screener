@@ -79,7 +79,7 @@ for etf in tickers:
 
     # Compute final score
     if not np.isnan(correlation) and not np.isnan(beta_penalty) and not np.isnan(rmse):
-        score = (correlation + beta_penalty - rmse - tracking_error + tracking_difference - expense_ratio)
+        score = (correlation + beta_penalty + tracking_difference - rmse - tracking_error - expense_ratio)
     else:
         score = np.nan
     
